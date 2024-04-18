@@ -1,0 +1,1 @@
+This project is trying to build RBAC (Role-Based Access Control) feature with fastAPI and Casbin.
