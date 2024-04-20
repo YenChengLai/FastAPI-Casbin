@@ -1,1 +1,2 @@
-fastapi-casbin
+# Ignore virtual environment directory
+fastapi-casbin/
