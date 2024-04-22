@@ -21,18 +21,50 @@ This project is trying to build RBAC (Role-Based Access Control) feature with fa
 ### Features
 
 1. Role Management
+   
+   - Only Admin user can see this page.
+
+   - Admin user can adjust other users' group or role
 
 2. Remote Device Access (SSH)
+  
+   - All users can access to this feature
+   
+   - This behavior needs approval  
 
 3. Email Communication (Sending emails)
+  
+   - All users can access to this feature
+   
+   - This behavior needs approval
 
 4. Org/Site/Device Management
 
+   - No limitations to this feature
+
 5. Firmware Management
+
+   - Firmware Integrity Check
+      
+      - No limitation to this page
+
+   - Firmware Update to Site/Device
+
+      - This behavior needs approval
 
 6. Auditing
 
+   - Only Administrator and Developer can see this page
+
 7. Announcement Management
+
+   - Only Administrator and User can access to this feature
+   
+   - This behavior needs approval 
+
+8. Approval Pending
+   
+   - Only Administrator can access this page
 
 ### Roles
 
@@ -44,14 +76,16 @@ This project is trying to build RBAC (Role-Based Access Control) feature with fa
 
 ### Feature - Role Relationship
 
+✓ - Allowed &nbsp;&nbsp; ! - Need Approval &nbsp;&nbsp; X - No Permission
+
 | Feature                  | Administrator | Developer   | User        |
 |--------------------------|---------------|-------------|-------------|
-| Role Management          | ✓             |             |             |
-| Remote Device Access     | ✓             |             | !           |
-| Email Communication      | ✓             | ✓           |             |
+| Role Management          | ✓             | X           | X           |
+| Remote Device Access     | ✓             | !           | !           |
+| Email Communication      | ✓             | !           | !           |
 | Organization Management  | ✓             | ✓           | ✓           |
-| Firmware Management      | ✓             |             | !           |
-| Auditing                 | ✓             |             |             |
-| Announcement Management  | ✓             |             | !           |
-
+| Firmware Management      | ✓             | ✓ !         | ✓ !         |
+| Auditing                 | ✓             | ✓           | X           |
+| Announcement Management  | ✓             | X           | !           |
+| Approval Pending         | ✓             | X           | X           |
 
