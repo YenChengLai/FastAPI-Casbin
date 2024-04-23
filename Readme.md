@@ -28,13 +28,13 @@ This project is trying to build RBAC (Role-Based Access Control) feature with fa
 
 2. Remote Device Access (SSH)
   
-   - All users can access to this feature
+   - All roles can access to this feature
 
    - This behavior needs approval  
 
 3. Email Communication (Sending emails)
   
-   - All users can access to this feature
+   - All roles can access to this feature
 
    - This behavior needs approval
 
@@ -60,11 +60,29 @@ This project is trying to build RBAC (Role-Based Access Control) feature with fa
 
    - Only Administrator and User can access to this feature
 
-   - This behavior needs approval 
+   - This behavior needs approval
 
 8. Approval Pending
 
    - Only Administrator can access this page
+
+9. Org Owner Management
+
+   - Only Administrator and User can see this page
+
+   - This behavior need approval
+
+10. Trial License Extension
+
+      - Only Administrator and User can see this page
+
+      - This behavior needs approval
+
+11. Generate OpenAPI Key
+
+      - Only Administrator and User can see this page
+
+      - This behavior needs approval
 
 ### Roles
 
@@ -88,3 +106,6 @@ This project is trying to build RBAC (Role-Based Access Control) feature with fa
 | Auditing                 | ✓             | ✓           | X           |
 | Announcement Management  | ✓             | X           | !           |
 | Approval Pending         | ✓             | X           | X           |
+| Org Owner Management     | ✓             | X           | !           |
+| Trial License Extension  | ✓             | X           | !           |
+| Generate OpenAPI Key     | ✓             | X           | !           |
