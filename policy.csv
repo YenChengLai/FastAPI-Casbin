@@ -1,0 +1,16 @@
+p,Administrator,role-management,read
+p,Administrator,remote-device-access,read
+p,Administrator,send-email,read
+p,Administrator,org-site-device-management,read
+p,Administrator,firmware-management,read
+p,Administrator,auditing,read
+p,Administrator,announcement-management,read
+p,Administrator,approval,read
+
+p,Developer,org-site-device-management,read
+p,Developer,firmware-management,read
+p,Developer,auditing,read
+
+p,User,org-site-device-management,read
+p,User,auditing,read
+p,User,announcement-management,read

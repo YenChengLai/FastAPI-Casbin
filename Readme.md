@@ -21,7 +21,7 @@ This project is trying to build RBAC (Role-Based Access Control) feature with fa
 ### Features
 
 1. Role Management
-   
+
    - Only Admin user can see this page.
 
    - Admin user can adjust other users' group or role
@@ -29,13 +29,13 @@ This project is trying to build RBAC (Role-Based Access Control) feature with fa
 2. Remote Device Access (SSH)
   
    - All users can access to this feature
-   
+
    - This behavior needs approval  
 
 3. Email Communication (Sending emails)
   
    - All users can access to this feature
-   
+
    - This behavior needs approval
 
 4. Org/Site/Device Management
@@ -45,7 +45,7 @@ This project is trying to build RBAC (Role-Based Access Control) feature with fa
 5. Firmware Management
 
    - Firmware Integrity Check
-      
+
       - No limitation to this page
 
    - Firmware Update to Site/Device
@@ -59,11 +59,11 @@ This project is trying to build RBAC (Role-Based Access Control) feature with fa
 7. Announcement Management
 
    - Only Administrator and User can access to this feature
-   
+
    - This behavior needs approval 
 
 8. Approval Pending
-   
+
    - Only Administrator can access this page
 
 ### Roles
@@ -88,4 +88,3 @@ This project is trying to build RBAC (Role-Based Access Control) feature with fa
 | Auditing                 | ✓             | ✓           | X           |
 | Announcement Management  | ✓             | X           | !           |
 | Approval Pending         | ✓             | X           | X           |
-
