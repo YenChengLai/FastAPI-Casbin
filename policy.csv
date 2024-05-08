@@ -1,16 +1,16 @@
-p,Administrator,role-management,read
-p,Administrator,remote-device-access,read
-p,Administrator,send-email,read
-p,Administrator,org-site-device-management,read
-p,Administrator,firmware-management,read
-p,Administrator,auditing,read
-p,Administrator,announcement-management,read
-p,Administrator,approval,read
+p,Administrator,role-management,GET
+p,Administrator,remote-device-access,GET
+p,Administrator,send-email,GET
+p,Administrator,org-site-device-management,GET
+p,Administrator,firmware-management,GET
+p,Administrator,auditing,GET
+p,Administrator,announcement-management,GET
+p,Administrator,approval,GET
 
-p,Developer,org-site-device-management,read
-p,Developer,firmware-management,read
-p,Developer,auditing,read
+p,Developer,org-site-device-management,GET
+p,Developer,firmware-management,GET
+p,Developer,auditing,GET
 
-p,User,org-site-device-management,read
-p,User,auditing,read
-p,User,announcement-management,read
+p,User,org-site-device-management,GET
+p,User,auditing,GET
+p,User,announcement-management,GET

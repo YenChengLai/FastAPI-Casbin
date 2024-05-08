@@ -1,3 +1,4 @@
+""" import fastapi and casbin """
 from fastapi import FastAPI, HTTPException, Depends
 from casbin import Enforcer
 
@@ -9,6 +10,7 @@ enforcer = Enforcer("rbac_model.conf", "policy.csv")
 
 # Define a dependency to check permission using Casbin
 def check_permission(role: str, path: str):
+    """ trigger casbin validation """
     print(role)
     print(path)
 
@@ -18,19 +20,21 @@ def check_permission(role: str, path: str):
 
 # Define routes with RBAC authorization
 @app.get("/admin")
-def admin_panel(role: str = Depends(check_permission)):
+def admin_panel(_ = Depends(check_permission)):
+    """ mock admin """
     return {"message": "Welcome to the admin panel!"}
 
 
 @app.get("/developer")
-def developer_panel(role: str = Depends(check_permission)):
+def developer_panel(_ = Depends(check_permission)):
+    """ mock developer """
     return {"message": "Welcome to the developer panel!"}
 
 
 @app.get("/user")
-def user_panel(role: str = Depends(check_permission)):
+def user_panel(_ = Depends(check_permission)):
+    """ mock user """
     return {"message": "Welcome to the user panel!"}
-
 
 if __name__ == "__main__":
     import uvicorn

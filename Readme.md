@@ -16,6 +16,18 @@ This project is trying to build RBAC (Role-Based Access Control) feature with fa
     source fastapi-casbin/bin/activate
     ```
 
+3. Initiate the project
+
+   ```.sh
+   fastapi dev main.py
+   ```
+
+   or
+
+   ```.sh
+   uvicorn main:app --reload
+   ```
+
 ## OP Tool Design
 
 ### Features
