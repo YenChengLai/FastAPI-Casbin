@@ -1,16 +1,10 @@
-p,Administrator,role-management,GET
-p,Administrator,remote-device-access,GET
-p,Administrator,send-email,GET
-p,Administrator,org-site-device-management,GET
-p,Administrator,firmware-management,GET
-p,Administrator,auditing,GET
-p,Administrator,announcement-management,GET
-p,Administrator,approval,GET
+p, admin, update, *
+p, admin, get, *
 
-p,Developer,org-site-device-management,GET
-p,Developer,firmware-management,GET
-p,Developer,auditing,GET
+p, dev, get, organization-management
+p, dev, update, organization-management
+p, dev, update, firmware-management
+p, dev, update, auditing
 
-p,User,org-site-device-management,GET
-p,User,auditing,GET
-p,User,announcement-management,GET
+p, user, update, organization-management
+p, user, update, firmware-management

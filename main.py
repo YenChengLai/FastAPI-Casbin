@@ -1,5 +1,4 @@
-""" import fastapi and casbin """
-from fastapi import FastAPI, HTTPException, Depends
+from fastapi import FastAPI, HTTPException, Depends, Request
 from casbin import Enforcer
 
 app = FastAPI()
@@ -9,32 +8,40 @@ enforcer = Enforcer("rbac_model.conf", "policy.csv")
 
 
 # Define a dependency to check permission using Casbin
-def check_permission(role: str, path: str):
+def check_permission(sub: str, request: Request, path: str):
     """ trigger casbin validation """
-    print(role)
-    print(path)
-
-    if not enforcer.enforce(role, path, "GET"):
+    if not enforcer.enforce(sub, "update" if request.method == "POST" else "get", path):
         raise HTTPException(status_code=403, detail="Permission denied")
 
 
 # Define routes with RBAC authorization
-@app.get("/admin")
-def admin_panel(_ = Depends(check_permission)):
-    """ mock admin """
-    return {"message": "Welcome to the admin panel!"}
+@app.get("/role-management")
+def role_management(_ = Depends(check_permission)):
+
+    return {"message": "role-management accessed!"}
 
 
-@app.get("/developer")
-def developer_panel(_ = Depends(check_permission)):
-    """ mock developer """
-    return {"message": "Welcome to the developer panel!"}
+@app.get("/remote-device-access")
+def remote_device_access(_ = Depends(check_permission)):
+
+    return {"message": "remote-device-access accessed!"}
 
 
-@app.get("/user")
-def user_panel(_ = Depends(check_permission)):
-    """ mock user """
-    return {"message": "Welcome to the user panel!"}
+@app.get("/email-communication")
+def email_communication(_ = Depends(check_permission)):
+
+    return {"message": "email-communication accessed!"}
+
+
+@app.get("/organization-management")
+def organization_management(_ = Depends(check_permission)):
+
+    return {"message": "organization-management accessed!"}
+
+@app.get("/firmware-update")
+def firmware_update(_ = Depends(check_permission)):
+
+    return {"message": "firmware-update accessed!"}
 
 if __name__ == "__main__":
     import uvicorn

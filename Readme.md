@@ -28,6 +28,8 @@ This project is trying to build RBAC (Role-Based Access Control) feature with fa
    uvicorn main:app --reload
    ```
 
+Go to http://127.0.0.1:8000/docs to test and send HTTP request with FastAPI provided swagger UI.
+
 ## OP Tool Design
 
 ### Features
