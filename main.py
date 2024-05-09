@@ -15,33 +15,77 @@ def check_permission(sub: str, request: Request, path: str):
 
 
 # Define routes with RBAC authorization
-@app.get("/role-management")
+@app.post("/role-management")
 def role_management(_ = Depends(check_permission)):
-
+    """ Editing users' roles and permissions """
     return {"message": "role-management accessed!"}
 
 
-@app.get("/remote-device-access")
+@app.post("/remote-device-access")
 def remote_device_access(_ = Depends(check_permission)):
-
+    """ SSH into remote devices """
     return {"message": "remote-device-access accessed!"}
 
 
-@app.get("/email-communication")
+@app.post("/email-communication")
 def email_communication(_ = Depends(check_permission)):
-
+    """ Sending emails to customers' accounts """
     return {"message": "email-communication accessed!"}
 
 
 @app.get("/organization-management")
 def organization_management(_ = Depends(check_permission)):
-
+    """ Search organization, site, and device's information """
     return {"message": "organization-management accessed!"}
 
-@app.get("/firmware-update")
-def firmware_update(_ = Depends(check_permission)):
 
+@app.post("/firmware-update")
+def firmware_update(_ = Depends(check_permission)):
+    """ Update remote device's firmware """
     return {"message": "firmware-update accessed!"}
+
+
+@app.get("/firmware-integrity")
+def firmware_integrity(_ = Depends(check_permission)):
+    """ Checking if there's any violation of firmware setting """
+    return {"message": "firmware-integrity accessed!"}
+
+
+@app.get("/auditing")
+def auditing(_ = Depends(check_permission)):
+    """ Access auditing page to check user behaviors """
+    return {"message": "auditing accessed!"}
+
+
+@app.post("/announcement")
+def announcement_management(_ = Depends(check_permission)):
+    """ Sending announcement to user accounts """
+    return {"message": "announcement management accessed!"}
+
+
+@app.post("/approval")
+def approval(_ = Depends(check_permission)):
+    """ Grant pending permissions """
+    return {"message": "approval pending page accessed!"}
+
+
+@app.post("/org-owner")
+def org_owner_management(_ = Depends(check_permission)):
+    """ Editing organization management """
+    return {"message": "org owner management accessed!"}
+
+
+@app.post("/extend-trial")
+def license_extension(_ = Depends(check_permission)):
+    """ Extend customer's trial """
+    return {"message": "license extension accessed!"}
+
+
+@app.post("/api-key")
+def generate_api_key(_ = Depends(check_permission)):
+    """ Generate OpenAPI key for customers """
+    return {"message": "generate api key accessed!"}
+
 
 if __name__ == "__main__":
     import uvicorn
