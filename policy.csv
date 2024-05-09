@@ -1,10 +1,21 @@
-p, admin, update, *
-p, admin, get, *
+p, admin, role-management, update
+p, admin, remote-device-access, update
+p, admin, email-communication, update
+p, admin, organization-management, get
+p, admin, firmware-update, update
+p, admin, firmware-integrity, get
+p, admin, auditing, get
+p, admin, announcement, update
+p, admin, approval, update
+p, admin, org-owner, update
+p, admin, extend-trial, update
+p, admin, api-key, update
 
-p, dev, get, organization-management
-p, dev, update, organization-management
-p, dev, update, firmware-management
-p, dev, update, auditing
+p, dev, organization-management, get
+p, dev, firmware-integrity, get
+p, dev, auditing, get
 
-p, user, update, organization-management
-p, user, update, firmware-management
+p, user, organization-management, get
+p, user, firmware-integrity, get
+
+g, admin, bob
