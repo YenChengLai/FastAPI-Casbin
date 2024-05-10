@@ -18,4 +18,4 @@ p, dev, auditing, get
 p, user, organization-management, get
 p, user, firmware-integrity, get
 
-g, admin, bob
+g, bob, admin
