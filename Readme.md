@@ -24,7 +24,7 @@ This project is trying to build RBAC (Role-Based Access Control) feature with fa
    uvicorn main:app --reload
    ```
 
-Go to http://127.0.0.1:8000/docs to test and send HTTP request with FastAPI provided swagger UI.
+Go to <http://127.0.0.1:8000/docs> to test and send HTTP request with FastAPI provided swagger UI.
 
 ## OP Tool Design
 
@@ -124,6 +124,32 @@ Go to http://127.0.0.1:8000/docs to test and send HTTP request with FastAPI prov
 
 Considering the fact that OP Tool is an internal tool without massive usage or peak moments, here are two proposals for the tools and system structure.
 
-1. FastAPI + HTML (jQuery) + Casbin + MongoDB + redis
+1. Microservices
+  
+   - Backend: FastAPI
 
-2. Django
+   - Frontend: S3 hosts static HTML page
+
+   - RBAC: Casbin
+
+   - Database: MongoDB
+
+   - Cache: Redis
+
+2. Monolith
+
+   - Backend: Django
+
+   - Frontend: Django Template
+
+   - RBAC: Casbin
+
+   - Database: MongoDB
+
+   - Cache: Redis
+
+### Library
+
+1. FastAPI (<https://fastapi.tiangolo.com/>)
+
+2. Casbin (<https://casbin.org/docs/get-started>)
