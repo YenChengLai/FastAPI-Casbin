@@ -7,16 +7,12 @@ This project is trying to build RBAC (Role-Based Access Control) feature with fa
 1. Go to the project folder in command line and run the below command:
 
     ```.sh
-    ./init.sh
+   source ./init.sh
     ```
 
-2. Activate the venv
+   This will install the necessary libs, setup the venv, and activate it.
 
-    ```.sh
-    source fastapi-casbin/bin/activate
-    ```
-
-3. Initiate the project
+2. Initiate the project
 
    ```.sh
    fastapi dev main.py
@@ -123,3 +119,11 @@ Go to http://127.0.0.1:8000/docs to test and send HTTP request with FastAPI prov
 | Org Owner Management     | ✓             | X           | !           |
 | Trial License Extension  | ✓             | X           | !           |
 | Generate OpenAPI Key     | ✓             | X           | !           |
+
+### System design
+
+Considering the fact that OP Tool is an internal tool without massive usage or peak moments, here are two proposals for the tools and system structure.
+
+1. FastAPI + HTML (jQuery) + Casbin + MongoDB + redis
+
+2. Django
