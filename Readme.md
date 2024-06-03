@@ -136,6 +136,8 @@ Considering the fact that OP Tool is an internal tool without massive usage or p
 
    - Cache: Redis
 
+   ![image](./pictures/microservices.png)
+
 2. Monolith
 
    - Backend: Django
@@ -147,6 +149,8 @@ Considering the fact that OP Tool is an internal tool without massive usage or p
    - Database: MongoDB
 
    - Cache: Redis
+
+   ![image](./pictures/monolith.png)
 
 ### Library
 
