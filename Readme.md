@@ -32,19 +32,19 @@ Go to <http://127.0.0.1:8000/docs> to test and send HTTP request with FastAPI pr
 
 1. Role Management
 
-   - Only Admin user can see this page.
+   - Only Admin user can see this page
 
    - Admin user can adjust other users' group or role
 
 2. Remote Device Access (SSH)
   
-   - All roles can access to this feature
+   - Only Admin and user have access to this feature
 
    - This behavior needs approval  
 
 3. Email Communication (Sending emails)
   
-   - All roles can access to this feature
+   - Only Admin and user have access to this feature
 
    - This behavior needs approval
 
@@ -54,7 +54,7 @@ Go to <http://127.0.0.1:8000/docs> to test and send HTTP request with FastAPI pr
 
 5. Firmware Management
 
-   - Firmware Integrity Check
+   - Firmware Integrity Check1j6
 
       - No limitation to this page
 
@@ -84,15 +84,15 @@ Go to <http://127.0.0.1:8000/docs> to test and send HTTP request with FastAPI pr
 
 10. Trial License Extension
 
-      - Only Administrator and User can see this page
+   - Only Administrator and User can see this page
 
-      - This behavior needs approval
+   - This behavior needs approval
 
 11. Generate OpenAPI Key
 
-      - Only Administrator and User can see this page
+   - Only Administrator and User can see this page
 
-      - This behavior needs approval
+   - This behavior needs approval
 
 ### Roles
 
@@ -109,10 +109,10 @@ Go to <http://127.0.0.1:8000/docs> to test and send HTTP request with FastAPI pr
 | Feature                  | Administrator | Developer   | User        |
 |--------------------------|---------------|-------------|-------------|
 | Role Management          | ✓             | X           | X           |
-| Remote Device Access     | ✓             | !           | !           |
-| Email Communication      | ✓             | !           | !           |
+| Remote Device Access     | ✓             | X           | !           |
+| Email Communication      | ✓             | X           | !           |
 | Organization Management  | ✓             | ✓           | ✓           |
-| Firmware Management      | ✓             | ✓ !         | ✓ !         |
+| Firmware Management      | ✓             | ✓!          | ✓!          |
 | Auditing                 | ✓             | ✓           | X           |
 | Announcement Management  | ✓             | X           | !           |
 | Approval Pending         | ✓             | X           | X           |
