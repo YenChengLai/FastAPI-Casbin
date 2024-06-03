@@ -80,7 +80,7 @@ Go to <http://127.0.0.1:8000/docs> to test and send HTTP request with FastAPI pr
 
    - Only Administrator and User can see this page
 
-   - This behavior need approval
+   - This behavior needs approval
 
 10. Trial License Extension
 
